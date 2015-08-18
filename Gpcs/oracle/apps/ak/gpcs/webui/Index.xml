@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="PageLayoutRN" windowTitle="GRCS" amDefName="Gpcs.oracle.apps.ak.gpcs.server.GpcsAM" controllerClass="Gpcs.oracle.apps.ak.gpcs.webui.GpcsCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:productBranding>
+            <oa:image id="ProdBrand" source="FNDTAPPBRAND.gif"/>
+         </ui:productBranding>
+         <ui:contents>
+            <oa:defaultDoubleColumn id="DoubleRN">
+               <ui:contents>
+                  <oa:messageTextInput id="ApplySite" disabled="true" prompt="Apply Site" columns="20" readOnly="false"/>
+                  <oa:formValue id="space1"/>
+                  <oa:messageTextInput id="ItemNo" prompt="Item No" columns="20" maximumLength="135"/>
+                  <oa:rawText id="QueryHtml" text="&lt;div style=&quot;margin-top: 23px; margin-left: -125px;&quot;> &lt;span style=&quot;color:red;&quot;>*&lt;/span> &lt;button id=&quot;query&quot; title=&quot;Query&quot; class=&quot;x7g&quot; style=&quot;background-image:url(/OA_HTML/cabo/images/swan/btn-bg1.gif)&quot; onclick=&quot;submitForm('DefaultFormName',1,{'evtSrcRowIdx':'','evtSrcRowId':'',event:'query',source:'query'});return false;&quot; type=&quot;button&quot;>Query&lt;/button> &lt;/div>"/>
+                  <oa:messageTextInput id="ItemDescription" prompt="Item Description" columns="40" disabled="true" viewName="GPCSVO1" viewAttr="Description" maximumLength="270"/>
+               </ui:contents>
+            </oa:defaultDoubleColumn>
+            <oa:rawText id="space" text="&lt;div>&lt;br/>&lt;/div>"/>
+            <oa:subTabLayout id="SubTabRN">
+               <ui:subTabs>
+                  <oa:subTabBar id="subTabBar1">
+                     <ui:contents>
+                        <oa:link id="MainLink" text="Main Information"/>
+                        <oa:link id="Orglink" text="Org Assign"/>
+                     </ui:contents>
+                  </oa:subTabBar>
+               </ui:subTabs>
+               <ui:contents>
+                  <oa:stackLayout id="Main">
+                     <ui:contents>
+                        <oa:defaultDoubleColumn id="doubleRN" headerDisabled="true">
+                           <ui:contents>
+                              <oa:rawText id="Title" text="&lt;div>&lt;span id=&quot;LabelBasicInfo&quot; style=&quot;font-weight:bold;&quot;>Basic Information&lt;/span>&lt;/div>"/>
+                              <oa:formValue id="space2"/>
+                              <oa:messageChoice id="ItemType" prompt="Item Type" pickListViewDef="Gpcs.oracle.apps.ak.gpcs.server.ItemTypeVO" pickListDispAttr="Itemtype" pickListValAttr="Itemtype" viewName="GPCSVO1" viewAttr="Itemtype" disabled="true"/>
+                              <oa:messageTextInput id="Template" prompt="Template" columns="20" viewName="TemplateVO1" viewAttr="Template" maximumLength="30" disabled="true"/>
+                              <oa:messageTextInput id="ProductLine" prompt="Product Line" columns="20" viewName="GPCSVO1" viewAttr="Productline" maximumLength="150" disabled="true"/>
+                              <oa:messageTextInput id="UOM" prompt="UOM" columns="20" viewName="GPCSVO1" viewAttr="Primaryuomcode" maximumLength="3" disabled="true"/>
+                              <oa:messageTextInput id="ProductSegment" prompt="Product Segment" columns="20" viewName="GPCSVO1" viewAttr="Productsegment" maximumLength="100" disabled="true"/>
+                              <oa:rawText id="space3" text="&lt;br/>"/>
+                              <oa:messageTextInput id="Big-MiddleClass" prompt="Big-Middle Class" columns="20" viewName="GPCSVO1" viewAttr="Bigmiddleclass" maximumLength="37" disabled="true"/>
+                              <oa:messageTextInput id="BrandName" prompt="Brand Name" columns="20" viewName="GPCSVO1" viewAttr="Brandname" maximumLength="300" disabled="true"/>
+                              <oa:messageTextInput id="MarketingModel" prompt="Marketing Model" columns="20" viewName="GPCSVO1" viewAttr="Marketingmodel" maximumLength="810" disabled="true"/>
+                              <oa:messageTextInput id="RegulatoryName" prompt="Regulatory Name" columns="20" viewName="GPCSVO1" viewAttr="Regulatoryname" maximumLength="20" disabled="true"/>
+                              <oa:messageTextInput id="Color" prompt="Color" columns="20" viewName="GPCSVO1" viewAttr="Color" maximumLength="150" disabled="true"/>
+                              <oa:messageTextInput id="EANCode" prompt="EAN Code" columns="20" viewName="GPCSVO1" viewAttr="Eancode" maximumLength="270" disabled="true"/>
+                              <oa:messageTextInput id="UPCCode" prompt="UPC Code" columns="20" viewName="GPCSVO1" viewAttr="Upccode" maximumLength="180" disabled="true"/>
+                              <oa:messageTextInput id="JANCode" prompt="JAN Code" columns="20"/>
+                              <oa:messageChoice id="CountryOfOrigin" prompt="Country Of Origin" pickListViewDef="Gpcs.oracle.apps.ak.gpcs.server.CountryOfOriginVO" pickListDispAttr="FlexText" pickListValAttr="FlexValue"/>
+                              <oa:formValue id="space4"/>
+                              <oa:messageTextInput id="MarketingDescription" viewName="GPCSVO1" viewAttr="Longdescription" maximumLength="810" prompt="Marketing Description" columns="70" disabled="true"/>
+                           </ui:contents>
+                        </oa:defaultDoubleColumn>
+                        <oa:defaultDoubleColumn id="doubleRN1" headerDisabled="true">
+                           <ui:contents>
+                              <oa:rawText id="Title1" text="&lt;div>&lt;span id=&quot;LabelBasicInfo&quot; style=&quot;font-weight:bold;&quot;>Additional Information&lt;/span>&lt;/div>"/>
+                              <oa:formValue id="space21"/>
+                              <oa:messageTextInput id="LocalModel" prompt="Local Model" viewName="GPCSVO1" viewAttr="Localmodel" maximumLength="810"/>
+                              <oa:messageChoice id="HSTCCCode" prompt="HS/TCC Code" pickListViewDef="Gpcs.oracle.apps.ak.gpcs.server.HSTCCCodeVO" pickListDispAttr="FlexText" pickListValAttr="FlexText"/>
+                              <oa:messageTextInput id="LongDescription" prompt="Long Description" columns="70" viewName="GPCSVO1" viewAttr="Longdescription" maximumLength="810"/>
+                              <oa:rawText id="space41" text="&lt;span style=&quot;color:red;margin-left:-125px;&quot;>*&lt;/span>"/>
+                              <oa:messageChoice id="IndiaVATProductGroup" prompt="India VAT Product Group" pickListViewDef="Gpcs.oracle.apps.ak.gpcs.server.IndiaVAProductGroupVO" pickListDispAttr="FlexText" pickListValAttr="FlexText"/>
+                           </ui:contents>
+                        </oa:defaultDoubleColumn>
+                     </ui:contents>
+                  </oa:stackLayout>
+                  <oa:stackLayout id="Org">
+                     <ui:contents>
+                        <oa:hGrid id="HGridRN" securityMode="standard" unvalidated="false">
+                           <ui:contents>
+                              <oa:messageCheckBox id="Test" prompt="Test12" rendered="true" required="no" adminCustomizable="true" viewName="SOBVO1" viewAttr="Selectflag"/>
+                              <oa:tree usage="hGrid" id="TreeRN" standalone="false">
+                                 <members>
+                                    <oa:nodeDef id="nodeDef2" viewName="SOBVO1" viewAttr="LedgerShortName"/>
+                                    <oa:childNode id="childNode2" viewLink="SOBOUVL" viewLinkAccessorName="OUVO">
+                                       <members>
+                                          <oa:nodeDef id="nodeDef1" viewName="OUVO1" viewAttr="OrgName"/>
+                                          <oa:childNode id="childNode1" ancestorNode="/Gpcs/oracle/apps/ak/gpcs/webui/Index.HGridRN.TreeRN" viewLink="SOBOUVL" viewLinkAccessorName="OUVO"/>
+                                       </members>
+                                    </oa:childNode>
+                                 </members>
+                              </oa:tree>
+                           </ui:contents>
+                        </oa:hGrid>
+                     </ui:contents>
+                  </oa:stackLayout>
+               </ui:contents>
+            </oa:subTabLayout>
+            <oa:rowLayout id="DoubleRN1">
+               <ui:contents>
+                  <oa:rawText id="ClaerHtml" text="&lt;button type=&quot;button&quot; onclick=&quot;submitForm('DefaultFormName',1,{'evtSrcRowIdx':'','evtSrcRowId':'',event:'clear',source:'clear'});return false;&quot; style=&quot;background-image:url(/OA_HTML/cabo/images/swan/btn-bg1.gif);margin-left:200px;&quot; class=&quot;x7g&quot; title=&quot;Clear&quot; id=&quot;clear&quot;>Clear&lt;/button>"/>
+                  <oa:submitButton id="Apply" text="Apply To Oracle" prompt="Apply To Oracle">
+                     <ui:primaryClientAction>
+                        <ui:fireAction event="apply"/>
+                     </ui:primaryClientAction>
+                  </oa:submitButton>
+               </ui:contents>
+            </oa:rowLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

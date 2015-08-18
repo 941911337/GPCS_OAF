@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="GpcsAM"
+   ComponentClass="Gpcs.oracle.apps.ak.gpcs.server.GpcsAMImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="CountryOfOriginVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.CountryOfOriginVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="GPCSVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.GPCSVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="HSTCCCodeVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.HSTCCCodeVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="IndiaVAProductGroupVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.IndiaVAProductGroupVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ItemTypeVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.ItemTypeVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="OUVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.OUVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="SOBVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.SOBVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TemplateVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.TemplateVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="GPCSLoginVO1"
+      ViewObjectName="Gpcs.oracle.apps.ak.gpcs.server.GPCSLoginVO" >
+   </ViewUsage>
+</AppModule>

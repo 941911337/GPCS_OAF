@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="ItemTypeVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="Gpcs.oracle.apps.ak.gpcs.server.ItemTypeVORowImpl"
+   ComponentClass="Gpcs.oracle.apps.ak.gpcs.server.ItemTypeVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT vl.flex_value_meaning ITEMTYPE
+      FROM APPS.FND_FLEX_VALUES_VL vl,APPS.FND_FLEX_VALUE_SETS sets
+      WHERE vl.flex_value_set_id=sets.flex_value_set_id
+      AND sets.flex_value_set_name='BENQ_INV_ITEMTYPE'
+      AND vl.enabled_flag='Y'
+      ORDER BY vl.flex_value_meaning
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <ViewAttribute
+      Name="Itemtype"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="150"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ITEMTYPE"
+      Expression="ITEMTYPE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="150" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

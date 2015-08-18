@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="Gpcs.oracle.apps.ak.gpcs.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="CountryOfOriginVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.CountryOfOriginVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="GpcsAM"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.GpcsAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="GPCSVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.GPCSVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="HSTCCCodeVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.HSTCCCodeVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="IndiaVAProductGroupVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.IndiaVAProductGroupVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ItemTypeVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.ItemTypeVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="OUVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.OUVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="SOBOUVL"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.SOBOUVL"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="SOBVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.SOBVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="TemplateVO"
+      FullName="Gpcs.oracle.apps.ak.gpcs.server.TemplateVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="CountryOfOriginVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="Gpcs.oracle.apps.ak.gpcs.server.CountryOfOriginVORowImpl"
+   ComponentClass="Gpcs.oracle.apps.ak.gpcs.server.CountryOfOriginVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT DISTINCT fv.flex_value, fv.flex_value || ' - ' || fvt.description AS flex_text
+  FROM apps.fnd_flex_values fv, apps.fnd_flex_values_tl fvt, apps.fnd_flex_value_sets fs
+ WHERE     fv.flex_value_id = fvt.flex_value_id
+       AND fvt.language = USERENV ('LANG')
+       AND fv.flex_value_set_id = fs.flex_value_set_id
+       AND fs.flex_value_set_name LIKE 'BENQ_INV_COO'
+       AND enabled_flag = 'Y'
+       AND (end_date_active IS NULL OR end_date_active > SYSDATE)
+ORDER BY fv.flex_value
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <ViewAttribute
+      Name="FlexValue"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="150"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="FLEX_VALUE"
+      Expression="FLEX_VALUE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="150" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="FlexText"
+      IsPersistent="false"
+      Precision="393"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="FLEX_TEXT"
+      Expression="FLEX_TEXT"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="393" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

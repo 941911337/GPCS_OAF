@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="GPCSVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="Gpcs.oracle.apps.ak.gpcs.server.GPCSVORowImpl"
+   ComponentClass="Gpcs.oracle.apps.ak.gpcs.server.GPCSVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT ppart AS itemnumber
+     , pdesc AS description
+     , pmkdesc AS longdescription
+     , pmkdesc AS marketdescription
+     , pb_item_type AS itemtype
+     , NVL (uom, 'EA') AS primaryuomcode
+     , plcode AS productline
+     , bigc AS bigclass
+     , midc AS middleclass
+     , bigc||'-'|| midc AS bigmiddleclass
+     , pmkname AS marketingmodel
+     , pmkname AS localmodel
+     , NVL (pcolor, '') AS color
+     , pbrand AS brandname
+     , ean AS eancode
+     , regulatoryname AS regulatoryname
+     , upc AS upccode
+     , psegment AS productsegment
+     , fgbigclass AS fgbigclass
+  FROM apps.xxin_gpcs_ppart
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <ViewAttribute
+      Name="Itemnumber"
+      IsPersistent="false"
+      Precision="135"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ITEMNUMBER"
+      Expression="ITEMNUMBER"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="135" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Description"
+      IsPersistent="false"
+      Precision="270"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="DESCRIPTION"
+      Expression="DESCRIPTION"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="270" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Longdescription"
+      IsPersistent="false"
+      Precision="810"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="LONGDESCRIPTION"
+      Expression="LONGDESCRIPTION"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="810" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Marketdescription"
+      IsPersistent="false"
+      Precision="810"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="MARKETDESCRIPTION"
+      Expression="MARKETDESCRIPTION"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="810" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Itemtype"
+      IsPersistent="false"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ITEMTYPE"
+      Expression="ITEMTYPE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Primaryuomcode"
+      IsPersistent="false"
+      Precision="3"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PRIMARYUOMCODE"
+      Expression="PRIMARYUOMCODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="3" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Productline"
+      IsPersistent="false"
+      Precision="150"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PRODUCTLINE"
+      Expression="PRODUCTLINE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="150" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Bigclass"
+      IsPersistent="false"
+      Precision="18"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BIGCLASS"
+      Expression="BIGCLASS"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="18" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Middleclass"
+      IsPersistent="false"
+      Precision="18"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="MIDDLECLASS"
+      Expression="MIDDLECLASS"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="18" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Bigmiddleclass"
+      IsPersistent="false"
+      Precision="37"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BIGMIDDLECLASS"
+      Expression="BIGMIDDLECLASS"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="37" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Marketingmodel"
+      IsPersistent="false"
+      Precision="810"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="MARKETINGMODEL"
+      Expression="MARKETINGMODEL"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="810" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Localmodel"
+      IsPersistent="false"
+      Precision="810"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="LOCALMODEL"
+      Expression="LOCALMODEL"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="810" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Color"
+      IsPersistent="false"
+      Precision="150"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="COLOR"
+      Expression="COLOR"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="150" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Brandname"
+      IsPersistent="false"
+      Precision="300"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BRANDNAME"
+      Expression="BRANDNAME"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="300" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Eancode"
+      IsPersistent="false"
+      Precision="270"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="EANCODE"
+      Expression="EANCODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="270" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Regulatoryname"
+      IsPersistent="false"
+      Precision="20"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="REGULATORYNAME"
+      Expression="REGULATORYNAME"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Upccode"
+      IsPersistent="false"
+      Precision="180"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="UPCCODE"
+      Expression="UPCCODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="180" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Productsegment"
+      IsPersistent="false"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PRODUCTSEGMENT"
+      Expression="PRODUCTSEGMENT"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fgbigclass"
+      IsPersistent="false"
+      Precision="100"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="FGBIGCLASS"
+      Expression="FGBIGCLASS"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

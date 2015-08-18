@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'GBK'?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+    <web-module id="APPS_HTML" path="file:/C:/p9879989_R12_GENERIC/jdevhome/jdev/myhtml/OA_HTML/"/>
+    <log>
+        <file path="OAGpcsWorkspace1-oc4j-app.log"/>
+    </log>
+    <jazn provider="XML" location="OAGpcsWorkspace1-jazn-data.xml" default-realm="jazn.com"/>
+    <data-sources path="OAGpcsWorkspace1-data-sources.xml"/>
+</orion-application>
